@@ -631,7 +631,7 @@
             </ul>
             <div class="nav-actions">
                 <div class="search-box">
-                    <input type="text" placeholder="Search anime merchandise...">
+                    <input type="text" placeholder="Search anime...">
                     <button>🔍</button>
                 </div>
                 <button style="background: #ff6b6b; border: none; padding: 0.5rem 1rem; border-radius: 5px; color: white;">Cart (0)</button>
@@ -692,14 +692,7 @@
                     <div class="category-image">💎</div>
                     <div class="category-info">
                         <div class="category-name">Accessories</div>
-                        <div class="category-count">345 items</div>
-                    </div>
-                </div>
-                <div class="category-card" onclick="filterByCategory('tapestries')">
-                    <div class="category-image">🎌</div>
-                    <div class="category-info">
-                        <div class="category-name">Tapestries</div>
-                        <div class="category-count">89 items</div>
+                        <div class="category-count">445 items</div>
                     </div>
                 </div>
             </div>
@@ -729,11 +722,11 @@
                         <span class="filter-label">Price:</span>
                         <select class="filter-select" id="priceFilter">
                             <option value="">All Prices</option>
-                            <option value="0-300">Under ₹300</option>
-                            <option value="300-600">₹300 - ₹600</option>
-                            <option value="600-1000">₹600 - ₹1,000</option>
-                            <option value="1000-1500">₹1,000 - ₹1,500</option>
-                            <option value="1500-999999">Above ₹1,500</option>
+                            <option value="0-400">Under ₹400</option>
+                            <option value="400-800">₹400 - ₹800</option>
+                            <option value="800-1500">₹800 - ₹1,500</option>
+                            <option value="1500-2500">₹1,500 - ₹2,500</option>
+                            <option value="2500-999999">Above ₹2,500</option>
                         </select>
                     </div>
                     <div class="filter-group">
@@ -746,7 +739,6 @@
                             <option value="weapons">Weapons</option>
                             <option value="plushies">Plushies</option>
                             <option value="accessories">Accessories</option>
-                            <option value="tapestries">Tapestries</option>
                         </select>
                     </div>
                     <div class="filter-group">
@@ -843,18 +835,18 @@
     </footer>
 
     <script>
-        // Product data with realistic Indian pricing based on ComicSense market rates
+        // Product data with reduced Indian pricing and sale tags
         const products = [
             {
                 id: 1,
                 title: "Naruto Uzumaki Hokage Figure",
                 series: "naruto",
                 category: "figures",
-                price: 1299,
-                originalPrice: 1899,
+                price: 1599,
+                originalPrice: 2299,
                 rating: 4.8,
                 reviews: 247,
-                badge: "32% OFF",
+                badge: "30% OFF",
                 emoji: "🧙‍♂️",
                 seller: "TokyoCollectibles_IN",
                 description: "Premium quality Hokage Naruto figure with removable cloak and multiple accessories. Ships from Mumbai warehouse."
@@ -864,11 +856,11 @@
                 title: "Luffy Gear 5 Keychain",
                 series: "onepiece",
                 category: "keychains",
-                price: 249,
-                originalPrice: 399,
+                price: 399,
+                originalPrice: 649,
                 rating: 4.6,
                 reviews: 156,
-                badge: "38% OFF",
+                badge: "Sale",
                 emoji: "🔑",
                 seller: "PirateKing_Delhi",
                 description: "Limited edition Gear 5 Luffy keychain with LED light-up feature. Fast delivery across India."
@@ -878,11 +870,11 @@
                 title: "Goku Ultra Instinct Figure",
                 series: "dragonball",
                 category: "figures",
-                price: 1799,
-                originalPrice: 2499,
+                price: 2199,
+                originalPrice: 3499,
                 rating: 4.9,
                 reviews: 389,
-                badge: "28% OFF",
+                badge: "37% OFF",
                 emoji: "💪",
                 seller: "DragonBall_Bangalore",
                 description: "Exclusive Ultra Instinct Goku with energy aura effects. Premium import quality with India warranty."
@@ -892,25 +884,24 @@
                 title: "Attack on Titan Scout Jacket",
                 series: "attackontitan",
                 category: "clothing",
-                price: 999,
-                originalPrice: 1399,
+                price: 1299,
                 rating: 4.7,
                 reviews: 203,
-                badge: "29% OFF",
+                badge: "Hot",
                 emoji: "🧥",
                 seller: "TitanGear_Chennai",
                 description: "Official Survey Corps jacket with embroidered wings. Available in Indian sizes S to XXL."
             },
             {
                 id: 5,
-                title: "Tanjiro's Nichirin Sword Replica",
+                title: "Tanjiro's Nichirin Sword",
                 series: "demonslayer",
                 category: "weapons",
-                price: 2299,
-                originalPrice: 3199,
+                price: 2999,
+                originalPrice: 4299,
                 rating: 4.8,
                 reviews: 178,
-                badge: "28% OFF",
+                badge: "30% OFF",
                 emoji: "⚔️",
                 seller: "DemonSlayer_Pune",
                 description: "Full-scale replica of Tanjiro's Nichirin blade with wooden display stand. COD available."
@@ -920,11 +911,10 @@
                 title: "Deku Hero Costume Set",
                 series: "myheroacademia",
                 category: "clothing",
-                price: 1199,
-                originalPrice: 1699,
+                price: 1499,
                 rating: 4.5,
                 reviews: 134,
-                badge: "29% OFF",
+                badge: "New",
                 emoji: "🦸‍♂️",
                 seller: "HeroAcademy_Kolkata",
                 description: "Complete Deku hero costume with mask, gloves, and utility belt. Perfect for cosplay events."
@@ -934,11 +924,11 @@
                 title: "Pikachu Plush Collection",
                 series: "pokemon",
                 category: "plushies",
-                price: 599,
-                originalPrice: 849,
+                price: 699,
+                originalPrice: 999,
                 rating: 4.9,
                 reviews: 567,
-                badge: "29% OFF",
+                badge: "30% OFF",
                 emoji: "⚡",
                 seller: "Pokemon_Hyderabad",
                 description: "Official Pokemon Center Pikachu plush. Super soft, perfect gift for anime fans of all ages."
@@ -948,11 +938,10 @@
                 title: "One Piece Straw Hat",
                 series: "onepiece",
                 category: "accessories",
-                price: 449,
-                originalPrice: 649,
+                price: 549,
                 rating: 4.4,
                 reviews: 189,
-                badge: "31% OFF",
+                badge: "Bestseller",
                 emoji: "👒",
                 seller: "PirateKing_Delhi",
                 description: "Authentic replica of Luffy's iconic straw hat. High-quality materials, adjustable size."
@@ -962,11 +951,11 @@
                 title: "Sasuke Uchiha Figure",
                 series: "naruto",
                 category: "figures",
-                price: 999,
-                originalPrice: 1399,
+                price: 1199,
+                originalPrice: 1899,
                 rating: 4.7,
                 reviews: 223,
-                badge: "29% OFF",
+                badge: "37% OFF",
                 emoji: "🌙",
                 seller: "TokyoCollectibles_IN",
                 description: "Sasuke in adult form with Chidori effect. Premium quality with authentic detailing."
@@ -976,11 +965,10 @@
                 title: "Demon Slayer Corps Pin Set",
                 series: "demonslayer",
                 category: "accessories",
-                price: 199,
-                originalPrice: 299,
+                price: 299,
                 rating: 4.6,
                 reviews: 298,
-                badge: "33% OFF",
+                badge: "Value Pack",
                 emoji: "📌",
                 seller: "DemonSlayer_Pune",
                 description: "Complete set of Demon Slayer Corps enamel pins. All breathing styles included in one pack."
@@ -990,11 +978,11 @@
                 title: "All Might Figure",
                 series: "myheroacademia",
                 category: "figures",
-                price: 1499,
-                originalPrice: 2099,
+                price: 1899,
+                originalPrice: 2799,
                 rating: 4.8,
                 reviews: 167,
-                badge: "29% OFF",
+                badge: "32% OFF",
                 emoji: "💪",
                 seller: "HeroAcademy_Kolkata",
                 description: "Muscle form All Might with signature smile. High-quality PVC construction."
@@ -1004,56 +992,13 @@
                 title: "Mikasa Ackerman Scarf",
                 series: "attackontitan",
                 category: "accessories",
-                price: 399,
-                originalPrice: 599,
+                price: 599,
                 rating: 4.5,
                 reviews: 145,
-                badge: "33% OFF",
+                badge: "Winter Special",
                 emoji: "🧣",
                 seller: "TitanGear_Chennai",
                 description: "Eren's red scarf as worn by Mikasa. Soft wool blend, perfect for Indian winters."
-            },
-            {
-                id: 13,
-                title: "Demon Slayer Tapestry",
-                series: "demonslayer",
-                category: "tapestries",
-                price: 899,
-                originalPrice: 1199,
-                rating: 4.7,
-                reviews: 89,
-                badge: "25% OFF",
-                emoji: "🎌",
-                seller: "DemonSlayer_Pune",
-                description: "Nichirin Warrior tapestry featuring Tanjiro. Regular size (56 x 46 in). Premium fabric quality."
-            },
-            {
-                id: 14,
-                title: "Naruto Headband Set",
-                series: "naruto",
-                category: "accessories",
-                price: 349,
-                originalPrice: 499,
-                rating: 4.5,
-                reviews: 312,
-                badge: "30% OFF",
-                emoji: "🥷",
-                seller: "TokyoCollectibles_IN",
-                description: "Complete set of Hidden Village headbands. Konoha, Sand, Mist, and Cloud village designs included."
-            },
-            {
-                id: 15,
-                title: "Dragon Ball Scouter",
-                series: "dragonball",
-                category: "accessories",
-                price: 799,
-                originalPrice: 1099,
-                rating: 4.6,
-                reviews: 156,
-                badge: "27% OFF",
-                emoji: "👁️",
-                seller: "DragonBall_Bangalore",
-                description: "Working LED Scouter with sound effects. Adjustable for all head sizes. Perfect for cosplay events."
             }
         ];
 
@@ -1079,8 +1024,8 @@
                 
                 const priceDisplay = product.originalPrice ? 
                     `<div class="original-price">₹${product.originalPrice}</div>
-                     <div class="product-price">₹${product.price} <small>MRP</small></div>` : 
-                    `<div class="product-price">₹${product.price} <small>MRP</small></div>`;
+                     <div class="product-price">₹${product.price}</div>` : 
+                    `<div class="product-price">₹${product.price}</div>`;
                 
                 card.innerHTML = `
                     <div class="product-image">
@@ -1118,11 +1063,11 @@
                 
                 let matchesPrice = true;
                 if (price) {
-                    if (price === '0-300') matchesPrice = product.price <= 300;
-                    else if (price === '300-600') matchesPrice = product.price > 300 && product.price <= 600;
-                    else if (price === '600-1000') matchesPrice = product.price > 600 && product.price <= 1000;
-                    else if (price === '1000-1500') matchesPrice = product.price > 1000 && product.price <= 1500;
-                    else if (price === '1500-999999') matchesPrice = product.price > 1500;
+                    if (price === '0-400') matchesPrice = product.price <= 400;
+                    else if (price === '400-800') matchesPrice = product.price > 400 && product.price <= 800;
+                    else if (price === '800-1500') matchesPrice = product.price > 800 && product.price <= 1500;
+                    else if (price === '1500-2500') matchesPrice = product.price > 1500 && product.price <= 2500;
+                    else if (price === '2500-999999') matchesPrice = product.price > 2500;
                 }
                 
                 return matchesSeries && matchesCategory && matchesPrice;
@@ -1153,10 +1098,10 @@
             const content = document.getElementById('modalContent');
             
             const modalPriceDisplay = product.originalPrice ? 
-                `<div style="font-size: 1.2rem; color: #999; text-decoration: line-through; margin-bottom: 0.5rem;">₹${product.originalPrice} MRP</div>
-                 <div class="product-price" style="font-size: 2rem; margin-bottom: 1rem;">₹${product.price} <small>MRP</small></div>
+                `<div style="font-size: 1.2rem; color: #999; text-decoration: line-through; margin-bottom: 0.5rem;">₹${product.originalPrice}</div>
+                 <div class="product-price" style="font-size: 2rem; margin-bottom: 1rem;">₹${product.price}</div>
                  <div style="color: #e74c3c; font-weight: bold; margin-bottom: 1rem;">You save ₹${product.originalPrice - product.price}!</div>` : 
-                `<div class="product-price" style="font-size: 2rem; margin-bottom: 1rem;">₹${product.price} <small>MRP</small></div>`;
+                `<div class="product-price" style="font-size: 2rem; margin-bottom: 1rem;">₹${product.price}</div>`;
             
             content.innerHTML = `
                 <div class="modal-product-image">${product.emoji}</div>
@@ -1187,7 +1132,7 @@
         // Unlock contact
         function unlockContact(productId) {
             const product = products.find(p => p.id === productId);
-            alert(`🎉 Contact unlocked for ${product.title}!\n\nSeller: ${product.seller}\nEmail: ${product.seller.toLowerCase()}@animevault.in\nPhone: +91-98765-${productId.toString().padStart(5, '0')}\nWhatsApp: Available\nUPI ID: ${product.seller.toLowerCase()}@paytm\nCOD: Available in major cities\n\nFree shipping on orders above ₹499!\nThank you for choosing AnimeVault India! 🇮🇳`);
+            alert(`🎉 Contact unlocked for ${product.title}!\n\nSeller: ${product.seller}\nEmail: ${product.seller.toLowerCase()}@animevault.in\nPhone: +91-98765-${productId.toString().padStart(5, '0')}\nWhatsApp: Available\nUPI ID: ${product.seller.toLowerCase()}@paytm\nCOD: Available in major cities\n\nFree shipping on orders above ₹999!\nThank you for choosing AnimeVault India! 🇮🇳`);
         }
 
         // Event listeners
